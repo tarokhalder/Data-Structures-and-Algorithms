@@ -17,12 +17,12 @@ int main() {
     int m = sqrt(n) + 1;
     for (int i = 0; i < q; i++) {
         cin >> A[i].l >> A[i].r;
-	A[i].block = A[i].l / m;
-	A[i].id = i;
+	    A[i].block = A[i].l / m;
+	    A[i].id = i;
     }
     sort(A.begin() , A.end() ,[&](Q a , Q b) {
         if (a.block == b.block) {
-	   return a.l < b.l;
+	   return a.r < b.r;
 	}
         return a.block < b.block;	
     });
