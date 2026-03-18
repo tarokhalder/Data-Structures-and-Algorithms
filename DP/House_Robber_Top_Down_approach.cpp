@@ -12,7 +12,6 @@ int House_Robber(vector <int> & a , int n , vector <int> & dp) {
     if (dp[n] != -1){ 
        return dp[n];
     }
-    cnt++;
     int pick = a[n] + find(a , n - 2 , dp);
     int notpick = find(a , n - 1 , dp);
     return dp[n] = max(pick , notpick);
